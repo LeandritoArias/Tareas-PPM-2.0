@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1698969465 source:c:\users\leand\onedrive\desktop\class stuff c3 2023\programacion ppm\tareas-ppm-2.0\cap 8 programacion\ejemplo cedula\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+

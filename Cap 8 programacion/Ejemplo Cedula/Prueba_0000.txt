@@ -1,0 +1,7 @@
+Nombre: Prueba
+Apellido: probando
+Sexo: Femenino
+Nacionalidad: Gringa
+Numero de Cedula: 0000
+Fecha de nacimiento: 5/6/1991
+Edad: 32

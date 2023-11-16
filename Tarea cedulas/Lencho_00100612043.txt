@@ -1,0 +1,7 @@
+Nombre: Lencho
+Apellido: Arias
+Sexo: Masculino
+Nacionalidad: Dominicano
+Numero de Cedula: 00100612043
+Fecha de nacimiento: 18/12/1959
+Edad: 63
