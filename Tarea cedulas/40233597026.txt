@@ -1,0 +1,12 @@
+
+------------------------------------------------------------------
+CEDULA DE IDENTIFICACION DE:	Leandro Arias
+------------------------------------------------------------------
+Nombre: Leandro
+Apellido: Arias
+Sexo: Masculino
+Nacionalidad: Dominicano
+Numero de Cedula: 40233597026
+Fecha de nacimiento: 12/1/2002
+Edad: 21
+Tipo de sangre: O+

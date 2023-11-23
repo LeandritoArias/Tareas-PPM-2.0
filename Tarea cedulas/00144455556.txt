@@ -1,0 +1,12 @@
+
+------------------------------------------------------------------
+CEDULA DE IDENTIFICACION DE:	Miguel Silverio
+------------------------------------------------------------------
+Nombre: Miguel
+Apellido: Silverio
+Sexo: Masculino
+Nacionalidad: Mejicano
+Numero de Cedula: 00144455556
+Fecha de nacimiento: 4/5/1980
+Edad: 43
+Tipo de sangre: AB+

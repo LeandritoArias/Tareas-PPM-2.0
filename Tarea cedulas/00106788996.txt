@@ -1,0 +1,12 @@
+
+------------------------------------------------------------------
+CEDULA DE IDENTIFICACION DE:	Georgina Torres
+------------------------------------------------------------------
+Nombre: Georgina
+Apellido: Torres
+Sexo: Femenino
+Nacionalidad: DOminicana
+Numero de Cedula: 00106788996
+Fecha de nacimiento: 20/3/1970
+Edad: 53
+Tipo de sangre: O+

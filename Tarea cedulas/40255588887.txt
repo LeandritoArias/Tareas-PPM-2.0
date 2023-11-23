@@ -1,0 +1,12 @@
+
+------------------------------------------------------------------
+CEDULA DE IDENTIFICACION DE:	Karen Arias
+------------------------------------------------------------------
+Nombre: Karen
+Apellido: Arias
+Sexo: Femenino
+Nacionalidad: Dominicana
+Numero de Cedula: 40255588887
+Fecha de nacimiento: 3/12/1999
+Edad: 23
+Tipo de sangre: O-

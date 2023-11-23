@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <dirent.h>
 
 
 /////Esta es la estructura para los datos de la cedula
@@ -12,6 +13,7 @@ struct cedula
     char sexo[10];
     char nacionalidad [15];
     char ID[13];
+    char sangre[4];
 
 };
 
@@ -101,6 +103,84 @@ int nueva_cedula ()
 
         printf("\nIngrese Fecha de Nacimiento dd/mm/aaaa: ");
         scanf("%d/%d/%d", &datos.dia, &datos.mes, &datos.ano);
+
+        printf("\nCual es su tipo de sangre? (seleccione el numero correspondiente a su tipo):");
+        printf("\n1.A+");
+        printf("\n2.O+");
+        printf("\n3.B+");
+        printf("\n4.AB+");
+        printf("\n5.A-");
+        printf("\n6.0-");
+        printf("\n7.B-");
+        printf("\n8.AB-");
+        printf("\n\n==>\t");
+
+        char tipo_sangre;
+        int scorrect2=1;
+        scanf("%s", &tipo_sangre);
+
+        while(scorrect2==1)
+        {
+                if (tipo_sangre=='1')
+                {
+                    strcpy(p.sangre,"A+");
+                    scorrect2=0;
+                }
+                else if (tipo_sangre=='2')
+                {
+                    strcpy(p.sangre,"O+");
+                    scorrect2=0;
+                }
+                else if (tipo_sangre=='3')
+                {
+                    strcpy(p.sangre,"B+");
+                    scorrect2=0;
+                }
+                else if (tipo_sangre=='4')
+                {
+                    strcpy(p.sangre,"AB+");
+                    scorrect2=0;
+                }
+                else if (tipo_sangre=='5')
+                {
+                    strcpy(p.sangre,"A-");
+                    scorrect2=0;
+                }
+                else if (tipo_sangre=='6')
+                {
+                    strcpy(p.sangre,"O-");
+                    scorrect2=0;
+                }
+                else if (tipo_sangre=='7')
+                {
+                    strcpy(p.sangre,"B-");
+                    scorrect2=0;
+                }
+                else if (tipo_sangre=='8')
+                {
+                    strcpy(p.sangre,"AB-");
+                    scorrect2=0;
+                }
+                else
+                {
+                    printf("\nEntrada incorrecta. Intentalo nuevamente.\n");
+                    printf("\nCual es su tipo de sangre? (seleccione el numero correspondiente a su tipo:");
+                    printf("\n1.A+");
+                    printf("\n1.O+");
+                    printf("\n1.B+");
+                    printf("\n1.AB+");
+                    printf("\n1.A-");
+                    printf("\n1.0-");
+                    printf("\n1.B-");
+                    printf("\n1.AB-");
+
+                    scanf("%c", &tipo_sangre);
+                }
+
+        }
+
+
+
         printf("\nCual es su nacionalidad?\t");
         scanf("%s", p.nacionalidad);
         printf("\nIngrese su numero de cedula:\t");
@@ -108,9 +188,13 @@ int nueva_cedula ()
 
         //Aqui se abre el archivo en modo escritura para guardar los datos de la cedula creada
         char archivo_nombre[50];
-        sprintf(archivo_nombre, "%s_%s.txt", p.nombre, p.ID);
+        sprintf(archivo_nombre, "%s.txt", p.ID);
 
         FILE *archivo = fopen(archivo_nombre, "w");
+
+        fprintf(archivo, "\n------------------------------------------------------------------");
+        fprintf(archivo, "\nCEDULA DE IDENTIFICACION DE:\t%s %s", (p).nombre,(p).apellido);
+        fprintf(archivo, "\n------------------------------------------------------------------\n");
 
         fprintf(archivo, "Nombre: %s\n", p.nombre);
         fprintf(archivo, "Apellido: %s\n", p.apellido);
@@ -119,6 +203,7 @@ int nueva_cedula ()
         fprintf(archivo, "Numero de Cedula: %s\n", p.ID);
         fprintf(archivo, "Fecha de nacimiento: %d/%d/%d\n", datos.dia, datos.mes, datos.ano);
         fprintf(archivo, "Edad: %d\n", calcular_edad(datos));
+        fprintf(archivo, "Tipo de sangre: %s", p.sangre);
 
         fclose(archivo);
 
@@ -128,10 +213,6 @@ int nueva_cedula ()
 
             char linea[100];
 
-            printf("\n------------------------------------------------------------------");
-            printf("\nCEDULA DE IDENTIFICACION DE:\t%s %s", (p).nombre,(p).apellido);
-            printf("\n------------------------------------------------------------------\n");
-
             //Aqui se lee linea por linea para imprimir el contenido.
             //Se deja de imprimir cuando se encuentre \0.
             while (fgets(linea, sizeof(linea), archivo) != NULL)
@@ -139,8 +220,9 @@ int nueva_cedula ()
                 printf("%s", linea);
             }
 
-            printf("\nPresiona 'ENTER' para continuar.");
+
             printf("\n\n");
+            printf("\nPresiona 'ENTER' para continuar.");
             fflush(stdin);
             getchar();
             printf("\n\n");
@@ -155,8 +237,7 @@ int nueva_cedula ()
 void abrir_cedula()
 {
     printf("\n\n");
-    printf("\nEscriba su nombre y su numero de cedula para identificar sus datos");
-    printf("\n(Debe escribirlo de la siguiente manera:'Nombre_cedula.txt' ->\t");
+    printf("\nEscriba su numero de cedula para identificar sus datos(escriba 'txt' al final):\t");
 
     //Esto es para poder escribir el nombre del archivo correspondiente a la cedula que queremos
     char Nombre_cedula[40];
@@ -176,10 +257,6 @@ void abrir_cedula()
 
             char linea[100];
 
-            printf("\n------------------------------------------------------------------");
-            printf("\nCEDULA DE IDENTIFICACION DE:\t%s", Nombre_cedula);
-            printf("\n------------------------------------------------------------------\n");
-
             //Aqui se lee linea por linea para imprimir el contenido.
             //Se deja de imprimir cuando se encuentre \0.
             while (fgets(linea, sizeof(linea), archivo) != NULL)
@@ -187,6 +264,7 @@ void abrir_cedula()
                 printf("%s", linea);
             }
 
+            printf("\n\n");
             printf("\nPresiona 'ENTER' para continuar.");
             printf("\n\n");
             fflush(stdin);
@@ -195,6 +273,54 @@ void abrir_cedula()
 
             return main();
 
+}
+
+int abrir_todos()
+{
+    printf("\n\n");
+    printf("\n========================================================");
+    printf("\nLISTA DE TODAS LAS CEDULAS REGISTRADAS EN EL PROYECTO");
+    printf("\n========================================================\n");
+
+    //Aqui claramente hice trampa usando una nueva libreria
+    //especificamente las de directorio o carpetas
+
+    DIR *carpeta;
+    struct dirent *ent;
+
+    //se pone el punto en opendir para referirse a la carpeta actual
+    if ((carpeta = opendir(".")) != NULL) {
+        // Lee todas las entradas del directorio
+        while ((ent = readdir(carpeta)) != NULL) {
+            // Verifica si el archivo tiene la extensión .txt
+            if (strstr(ent->d_name, ".txt") != NULL) {
+                // abre todo lo que tenga .txt al final
+                FILE *archivo = fopen(ent->d_name, "r");
+
+                if (archivo != NULL) {
+                    char linea[100];
+                    // Imprime el contenido del archivo .txt que tiene abierto actualmente
+                    while (fgets(linea, sizeof(linea), archivo) != NULL) {
+                        printf("%s", linea);
+                    }
+                    printf("\n\n");
+                    fclose(archivo);
+                }
+            }
+        }
+        closedir(carpeta);
+    } else {
+        // Imprime un mensaje de error si no se puede abrir el directorio
+        //perror es una funcion relacionada con otra de la biblioteca estandar de c que imprime un codigo de error.
+        perror("No se puede abrir el directorio actual");
+    }
+
+            printf("\n\n");
+            printf("\nPresiona 'ENTER' para continuar.");
+            fflush(stdin);
+            getchar();
+            printf("\n\n");
+            return main();
 }
 
 int main(void)
@@ -217,6 +343,7 @@ int main(void)
         int opcion_menu=0;
         fflush(stdin);
         scanf("%d", &opcion_menu);
+        fflush(stdin);
 
         //Switch case para las opciones, las 3 primeras llaman las otras funciones,
         // la 4ta termina el programa y cualquier otra da un mensaje de error y repite el programa.
@@ -228,8 +355,10 @@ int main(void)
                 case 2:
                     abrir_cedula();
                     break;
+                case 3:
+                    abrir_todos();
                 case 4:
-                    printf("\nPUE RUEDE DURISIMO ENTONSE O");
+                    printf("\nbai bai");
                     fin_programa=0;
                     break;
                 default:

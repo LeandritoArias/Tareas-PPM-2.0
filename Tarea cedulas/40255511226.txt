@@ -1,0 +1,12 @@
+
+------------------------------------------------------------------
+CEDULA DE IDENTIFICACION DE:	Andy Caraballo
+------------------------------------------------------------------
+Nombre: Andy
+Apellido: Caraballo
+Sexo: Masculino
+Nacionalidad: Belice
+Numero de Cedula: 40255511226
+Fecha de nacimiento: 6/5/2001
+Edad: 22
+Tipo de sangre: AB-
