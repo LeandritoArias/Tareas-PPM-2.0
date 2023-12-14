@@ -1,0 +1,11 @@
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\bin\Debug\Calculadora 2.0 deleandrou.exe.config
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\bin\Debug\Calculadora 2.0 deleandrou.exe
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\bin\Debug\Calculadora 2.0 deleandrou.pdb
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\obj\Debug\Calculadora 2.0 deleandrou.csproj.AssemblyReference.cache
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\obj\Debug\Calculadora 2.0 deleandrou.csproj.SuggestedBindingRedirects.cache
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\obj\Debug\Calculadora_2._0_deleandrou.Form1.resources
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\obj\Debug\Calculadora_2._0_deleandrou.Properties.Resources.resources
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\obj\Debug\Calculadora 2.0 deleandrou.csproj.GenerateResource.cache
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\obj\Debug\Calculadora 2.0 deleandrou.csproj.CoreCompileInputs.cache
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\obj\Debug\Calculadora 2.0 deleandrou.exe
+C:\Users\leand\OneDrive\Desktop\Class stuff C3 2023\Programacion ppm\Tareas-PPM-2.0\Calculadora 2.0 deleandrou\Calculadora 2.0 deleandrou\obj\Debug\Calculadora 2.0 deleandrou.pdb
