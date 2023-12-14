@@ -71,6 +71,9 @@ namespace Calculadora_2._0_deleandrou
                     Numero1 = Convert.ToDouble(resultado_textbox.Text);
                     break;
                 case '÷':
+                    if (resultado_textbox.Text=="0")
+                     MessageBox.Show("No se puede dividir entre '0'!"); 
+                    else
                     resultado_textbox.Text = (Numero1 / Numero2).ToString();
                     Numero1 = Convert.ToDouble(resultado_textbox.Text);
                     break;
